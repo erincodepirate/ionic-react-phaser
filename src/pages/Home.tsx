@@ -1,6 +1,14 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
+import config from '../config';
+import GameScene from '../scenes/Game';
+
+
+new Phaser.Game(
+  Object.assign(config, {
+    scene: [GameScene]
+  })
+);
 
 const Home: React.FC = () => {
   return (
@@ -16,7 +24,7 @@ const Home: React.FC = () => {
             <IonTitle size="large">Blank</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer />
+        <div id="game"></div>
       </IonContent>
     </IonPage>
   );
