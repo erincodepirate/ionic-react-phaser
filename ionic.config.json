@@ -1,0 +1,7 @@
+{
+  "name": "ionic-react-phaser",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
