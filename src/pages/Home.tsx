@@ -24,7 +24,6 @@ const Home: React.FC = () => {
             <IonTitle size="large">Blank</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <div id="game"></div>
       </IonContent>
     </IonPage>
   );

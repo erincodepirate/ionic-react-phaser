@@ -18,15 +18,24 @@ import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
+import config from './config';
+import GameScene from './scenes/Game';
 
 /* Theme variables */
 import './theme/variables.css';
 
 setupIonicReact();
 
+new Phaser.Game(
+  Object.assign(config, {
+    scene: [GameScene]
+  })
+);
+
 const App: React.FC = () => (
   <IonApp>
-    <IonReactRouter>
+    <div id="game"></div>
+    {/* <IonReactRouter>
       <IonRouterOutlet>
         <Route exact path="/home">
           <Home />
@@ -35,7 +44,7 @@ const App: React.FC = () => (
           <Redirect to="/home" />
         </Route>
       </IonRouterOutlet>
-    </IonReactRouter>
+    </IonReactRouter> */}
   </IonApp>
 );
 
